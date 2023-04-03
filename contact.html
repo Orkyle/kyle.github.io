@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us</title>
+<link rel="stylesheet" href="contact.css">     
+</head>
+
+<body>
+
+    <img src="./bg.png" alt="">
+    <div class="container">
+
+            <!-- sign in welcome -->
+            <div class="ltext ">
+                <h1>welcome back!</h1>
+                <p>to keep connected with us please login with</p>
+                <p> your personal information </p>
+                <button>sign in</button>
+           
+           
+
+        </div>
+        <!-- login form -->
+    <form action="web.php" method="post">
+        
+        <div class="login form">
+            <h1>login account</h1>
+
+            <ul class="social">
+                <img src="./facebook.png" alt="">
+                <img src="./twitter.png" alt="">
+                <img src="./YouTube_light_color_icon_SQUARE.png"class="youtube" alt="">
+            </ul>
+            <div>
+                <input type="text" class="name" id="name" name="user-name">
+            <label for="name">name</label>
+        </div>
+
+        <div>
+            <input type="email" class="email" name='email'>
+            <label for='email'>email</label>
+        </div>
+        
+        <a href="#">dont have an account</a>
+        <button>login</button>
+
+
+    </div>
+</form>
+
+    <!-- signup form -->
+    <div class="sign_up form">
+        <div class="welcoming-text">
+            <h1>create account</h1>
+        <ul class="social">
+            <img src="./facebook.png" alt="">
+            <img src="./twitter.png" alt="">
+            <img src="./YouTube_light_color_icon_SQUARE.png"class="youtube" alt="">
+        </ul>
+        <p>or use you email for regestration</p>
+        <div>
+            <label for="first_name">first_name</label>
+            <input type="text" class="first_name" id="first_name" name="first_name">
+        </div>
+        <div>
+            <label for="name">other_name</label>
+            <input type="text" class="name" id="other_name" name="other_name">
+        </div>
+
+        <div>
+            <label for='email'>email</label>
+            <input type="email" class="email" name='email'>
+        </div>
+        <div>
+            <label for='password'>password</label>
+            <input type="password" class="password" name='password'>
+        </div>
+        <div>
+            <label for='re_password'>password</label>
+            <input type="password" class="re_password" name='re_password'>
+        </div>
+
+        <a href="#">dont have an account</a>
+        <button id="signup">signup</button>
+
+        
+    </div>
+     <!-- sign up welcome -->
+     <div class="signup text">
+        <h1>are you new </h1>
+        <p>enter your personal details </p>
+        <p>and start a beautiful journey with us</p>
+        <button>sign up</button>
+    </div>
+</div>
+    
+</body>
+
+</html>

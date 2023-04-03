@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        img{
+            width: 40px;
+            height: 40px;
+        }
+        .profile_pic{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            border: 2px solid ;
+display: flex;
+overflow: hidden;
+object-fit: cover;
+
+justify-content: center;
+align-items: center;
+flex-direction: column;
+        }
+        #file{
+            display: none;
+        }
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+        }
+        label{
+            position:absolute;
+            bottom:0;
+            background: rgba(0,0,0,.5);
+            width: 100%;
+            text-align: center;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            /* transform: translatey(100px); */
+            transition: all 0.4s ease;
+        }
+        img:hover ~ label{
+            transform: translatey(0px);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="profile_pic">
+<img src="./ann.JPG" alt="" id="img">
+
+        <input type="file" name="file" id="file">    
+        <label for="file">choose file</label>
+    </div>
+
+    <script>
+        const file = document.querySelector('#file')
+        const img = document.querySelector('#img')
+
+        file.addEventListener('change',()=>{
+            const choosedFile = this.file[0];
+            if(choosedFile){
+                const reader = new FileReader();
+                reader.addEventListener('load',()=>{
+                    img.setAttribute('src',reader.result);
+                });
+                reader.readAsDataURL(choosedFile);
+            }
+        })
+    </script>
+</body>
+</html>
